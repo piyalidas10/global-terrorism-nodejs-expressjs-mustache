@@ -1,0 +1,42 @@
+{
+  "name": "globalterrorism",
+  "version": "0.0.1",
+  "author": {
+    "name": "Piyali Das",
+    "email": "piyalidas.it@gmail.com"
+  },
+  "description": "Worldmap of Global Terrorism",
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/piyalidas10/"
+  },
+  "contributors": [
+    "piyali das <piyalidas.it@gmail.com>"
+  ],
+  "homepage": "http://localhost:4200/home",
+  "keywords": [
+    "ecommerce",
+    "POC",
+    "angular",
+    "application"
+  ],
+  "engines": {
+    "node": ">= 10.15.3",
+    "npm": ">= 6.4.1"
+  },
+  "scripts": {},
+  "dependencies": {
+    "csvtojson": "^2.0.10",
+    "express": "^4.17.1",
+    "mustache": "^3.1.0",
+    "mustache-express": "^1.3.0",
+    "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "~8.9.4",
+    "nodemon": "^2.0.2"
+  }
+}

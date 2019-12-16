@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Global Terrorism Map</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
+  <style>
+  .country {background: #F5F5F5; border: #CCCCCC 1px solid; border-radius: 5px; margin-bottom: 15px; text-align: center;}
+  .country p{margin-bottom: 5px;}
+  .country h5 {background: #000000; color: #FFFFFF; padding: 5px; margin: 0;}
+  .country img {height: 48px;}
+  </style>
+</head>
+<body>
+      <div class="container-fluid">
+      <h3 class="text-center">Terrorism Attack in the World (1970-2015)</h3>
+      <div class="row">
+          {{#data}}
+          <div class="col-4 col-md-3 col-lg-2">
+              <div class="country">
+                <img src="/flags/{{name}}.png" />
+                <p>{{country}}</p>
+                <h5>{{fatalities}}</h5>
+              </div>  
+          </div>
+          {{/data}}
+        </div>  
+      </div>   
+</body>  
+</html>
