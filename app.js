@@ -7,10 +7,10 @@ const helmet = require('helmet');
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 
-const hostname = 'localhost';
 const port = process.env.PORT || 3000;
 
 const app = express();
+const server = http.Server(app);
 
 app.use('/', express.static(__dirname+'/public'));
 
@@ -52,8 +52,8 @@ app.get('/', function (req, res) {
 });
 
 // Prints a log once the server starts listening
-app.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server running`);
 });
 
 // CSV file to JSON
