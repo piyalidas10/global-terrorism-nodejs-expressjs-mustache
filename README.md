@@ -1,7 +1,18 @@
-#Run Application
+# Run Application
 ```
 nodemon app.js / node app.js
 http://localhost:3000/
+```
+
+# Deploy Nodejs application in Heroku
+```
+1. Create a Procfile to tell heroku how will run the application (web: node ./app.js)
+2. So process.env.PORT || 3000 means: whatever is in the environment variable PORT, or 3000 if there's nothing there.
+```
+
+# Video tutorial of Deployment in Heroku
+```
+https://www.youtube.com/watch?v=MxfxiR8TVNU
 ```
 
 # Database URL
