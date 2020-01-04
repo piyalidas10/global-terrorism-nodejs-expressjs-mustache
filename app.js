@@ -2,6 +2,8 @@
 const http = require('http');
 const fs = require('fs');
 const path = require('path');
+const cors = require('cors');
+const helmet = require('helmet');
 const express = require('express');
 const mustacheExpress = require('mustache-express');
 
@@ -11,6 +13,29 @@ const port = 3000;
 const app = express();
 
 app.use('/', express.static(__dirname+'/public'));
+
+// secure apps by setting various HTTP headers
+app.use(helmet()); 
+// enable CORS - Cross Origin Resource Sharing
+app.use(cors());
+
+app.use((req, res, next) => {
+  res.setHeader("Access-Control-Allow-Origin", "*");
+  res.setHeader(
+    "Access-Control-Allow-Headers",
+    "Origin, X-Requested-With, Content-Type, Accept"
+  );
+  res.setHeader(
+    "Access-Control-Allow-Methods",
+    "GET, POST, PATCH, DELETE, OPTIONS"
+  );
+  next();
+});
+
+// catch 404 and forward to error handler
+app.use((err, req, res, next) => {
+  next(createError(404));
+});
 
 // Register '.mustache' extension with The Mustache Express
 app.engine('mustache', mustacheExpress());

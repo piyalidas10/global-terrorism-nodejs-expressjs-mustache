@@ -18,9 +18,9 @@
   ],
   "homepage": "http://localhost:3000",
   "keywords": [
-    "ecommerce",
-    "POC",
-    "angular",
+    "globalterrorism",
+    "mustache",
+    "nodejs",
     "application"
   ],
   "engines": {
@@ -30,6 +30,9 @@
   "scripts": {},
   "dependencies": {
     "csvtojson": "^2.0.10",
+    "core-js": "^2.5.4",
+    "cors": "^2.8.5",
+    "helmet": "^3.21.0",
     "express": "^4.17.1",
     "mustache": "^3.1.0",
     "mustache-express": "^1.3.0",
