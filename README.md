@@ -4,6 +4,10 @@ nodemon app.js / node app.js
 http://localhost:3000/
 ```
 
+# Live URL
+https://globalterrorism-mustache.herokuapp.com/
+
+
 # Deploy Nodejs application in Heroku
 ```
 1. Create a Procfile to tell heroku how will run the application (web: node ./app.js)
